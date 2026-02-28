@@ -5,7 +5,7 @@ let socketInstance = null
 
 export function getSocket() {
   if (!socketInstance) {
-    socketInstance = io('/', {
+    socketInstance = io(process.env.VITE_SOCKET_URL || 'http://localhost:3000'  , {
       transports: ['websocket'],
       autoConnect: true,
     })
