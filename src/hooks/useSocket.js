@@ -5,7 +5,7 @@ let socketInstance = null
 
 export function getSocket() {
   if (!socketInstance) {
-    socketInstance = io(process.env.VITE_SOCKET_URL, {
+    socketInstance = io(import.meta.env.VITE_SOCKET_URL, {
       transports: ['websocket'],
       autoConnect: true,
     })
