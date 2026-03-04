@@ -43,7 +43,7 @@ export default function Layout({ children }) {
     <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
       {/* Sidebar */}
       <aside style={{
-        width: '220px',
+        width: '270px',
         minWidth: '220px',
         background: 'var(--bg-surface)',
         borderRight: '1px solid var(--border)',

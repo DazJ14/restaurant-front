@@ -140,7 +140,7 @@ export default function PedidosPage() {
                       borderColor: mesaId === mesa.id ? 'var(--accent)' : 'var(--border)',
                     }}
                   >
-                    <div style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800 }}>{mesa.numero}</div>
+                    <div style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800, color: 'var(--text-primary)' }}>{mesa.numero}</div>
                     <span className={`badge ${mesa.estado === 'disponible' ? 'badge-green' : 'badge-orange'}`} style={{ marginTop: '6px' }}>
                       {mesa.estado === 'disponible' ? 'Libre' : 'Ocupada'}
                     </span>
@@ -248,6 +248,7 @@ export default function PedidosPage() {
                           cursor: 'pointer',
                           textAlign: 'left',
                           transition: 'all 0.15s',
+                          color: 'var(--text-primary)',
                         }}
                         onMouseEnter={e => {
                           e.currentTarget.style.borderColor = 'var(--accent)'
